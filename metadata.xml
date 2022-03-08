@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ms:MetadataRecord xmlns:ms="http://w3id.org/meta-share/meta-share/">
+    <ms:MetadataRecordIdentifier ms:MetadataRecordIdentifierScheme="http://w3id.org/meta-share/meta-share/elg">default
+        id
+    </ms:MetadataRecordIdentifier>
+    <ms:metadataCreationDate>2022-01-07</ms:metadataCreationDate>
+    <ms:metadataLastDateUpdated>2022-01-10</ms:metadataLastDateUpdated>
+    <ms:metadataCurator>
+        <ms:actorType>Person</ms:actorType>
+        <ms:surname xml:lang="en">Gil</ms:surname>
+        <ms:givenName xml:lang="en">Lorena</ms:givenName>
+    </ms:metadataCurator>
+    <ms:compliesWith>http://w3id.org/meta-share/meta-share/ELG-SHARE</ms:compliesWith>
+    <ms:metadataCreator>
+        <ms:actorType>Person</ms:actorType>
+        <ms:surname xml:lang="en">Gil</ms:surname>
+        <ms:givenName xml:lang="en">Lorena</ms:givenName>
+    </ms:metadataCreator>
+    <!--  <ms:sourceOfMetadataRecord>{0,1}</ms:sourceOfMetadataRecord>-->
+    <!--  <ms:sourceMetadataRecord>{0,1}</ms:sourceMetadataRecord>-->
+    <!--  <ms:revision xml:lang="">{0,unbounded}</ms:revision>-->
+    <ms:DescribedEntity>
+
+        <ms:LanguageResource>
+            <ms:entityType>LanguageResource</ms:entityType>
+            <!--            <ms:physicalResource>{0,unbounded}</ms:physicalResource>-->
+            <ms:resourceName xml:lang="en">nlpnet</ms:resourceName>
+            <ms:description xml:lang="en">Part-of-speech tagging and semantic role labeling.</ms:description>
+            <!--            <ms:LRIdentifier ms:LRIdentifierScheme="">{0,unbounded}</ms:LRIdentifier>-->
+            <!--            <ms:logo>{0,1}</ms:logo>-->
+            <ms:version>1.0.0 (automatically assigned)</ms:version>
+            <!--            <ms:versionDate>{0,1}</ms:versionDate>-->
+            <!--            <ms:updateFrequency xml:lang="">{0,unbounded}</ms:updateFrequency>-->
+            <!--            <ms:revision xml:lang="">{0,unbounded}</ms:revision>-->
+            <!--            <ms:additionalInfo>
+                            <ms:landingPage>https://www.softcatala.org/tecnologies-de-la-llengua-en-catala/
+                            </ms:landingPage>
+                        </ms:additionalInfo>-->
+            <ms:contact>
+                <ms:Person>
+                    <ms:actorType>Person</ms:actorType>
+                    <ms:surname xml:lang="en">Rocha Fonseca</ms:surname>
+                    <ms:givenName xml:lang="en">Erick</ms:givenName>
+                </ms:Person>
+            </ms:contact>
+            <!--            <ms:mailingListName>{0,unbounded}</ms:mailingListName>-->
+            <!--            <ms:discussionURL>{0,unbounded}</ms:discussionURL>-->
+            <!--            <ms:citationText xml:lang="">{0,unbounded}</ms:citationText>-->
+            <!--            <ms:iprHolder>{0,unbounded}</ms:iprHolder>-->
+            <ms:keyword xml:lang="en">part-of-speech tagging</ms:keyword>
+            <ms:keyword xml:lang="es">clasificación gramatical</ms:keyword>
+            <ms:keyword xml:lang="en">semantic role labeling</ms:keyword>
+            <ms:keyword xml:lang="es">análisis semántico</ms:keyword>
+            <!--            <ms:domain>{0,unbounded}</ms:domain>-->
+            <!--            <ms:subject>{0,unbounded}</ms:subject>-->
+            <ms:resourceProvider>
+                <ms:Organization>
+                    <ms:actorType>Organization</ms:actorType>
+                    <ms:organizationName xml:lang="en">Interinstitutional Center for Computational Linguistics
+                    </ms:organizationName>
+                    <ms:organizationShortName xml:lang="en">NILC</ms:organizationShortName>
+                    <ms:website>http://www.nilc.icmc.usp.br/nilc/index.php</ms:website>
+                </ms:Organization>
+            </ms:resourceProvider>
+            <ms:resourceCreator>
+                <ms:Organization>
+                    <ms:actorType>Organization</ms:actorType>
+                    <ms:organizationName xml:lang="en">Interinstitutional Center for Computational Linguistics
+                    </ms:organizationName>
+                    <ms:organizationShortName xml:lang="en">NILC</ms:organizationShortName>
+                    <ms:website>http://www.nilc.icmc.usp.br/nilc/index.php</ms:website>
+                </ms:Organization>
+            </ms:resourceCreator>
+            <ms:publicationDate>2014-09-09</ms:publicationDate>
+            <!--            <ms:creationStartDate>{0,1}</ms:creationStartDate>-->
+            <!--            <ms:creationEndDate>2020-10-17</ms:creationEndDate>-->
+            <!--            <ms:fundingProject>{0,unbounded}</ms:fundingProject>-->
+            <!--            <ms:creationMode>{0,1}</ms:creationMode>-->
+            <!--            <ms:creationDetails xml:lang="">{0,unbounded}</ms:creationDetails>-->
+            <!--            <ms:hasOriginalSource>{0,unbounded}</ms:hasOriginalSource>-->
+            <!--            <ms:originalSourceDescription xml:lang="">{0,unbounded}</ms:originalSourceDescription>-->
+            <!--            <ms:isCreatedBy>{0,unbounded}</ms:isCreatedBy>-->
+            <ms:intendedApplication>
+                <ms:LTClassRecommended>	http://w3id.org/meta-share/omtd-share/PosTagging</ms:LTClassRecommended>
+            </ms:intendedApplication>
+            <!--            <ms:actualUse>{0,unbounded}</ms:actualUse>-->
+            <!--            <ms:validated>{0,1}</ms:validated>-->
+            <!--            <ms:validation>{0,unbounded}</ms:validation>-->
+            <!--            <ms:isDocumentedBy>{0,unbounded}</ms:isDocumentedBy>-->
+            <!--            <ms:isDescribedBy>{0,unbounded}</ms:isDescribedBy>-->
+            <!--            <ms:isCitedBy>{0,unbounded}</ms:isCitedBy>-->
+            <!--            <ms:isReviewedBy>{0,unbounded}</ms:isReviewedBy>-->
+            <!--            <ms:isPartOf>{0,unbounded}</ms:isPartOf>-->
+            <!--            <ms:isPartWith>{0,unbounded}</ms:isPartWith>-->
+            <!--            <ms:isSimilarTo>{0,unbounded}</ms:isSimilarTo>-->
+            <!--            <ms:isExactMatchWith>{0,unbounded}</ms:isExactMatchWith>-->
+            <!--            <ms:hasMetadata>{0,unbounded}</ms:hasMetadata>-->
+            <!--            <ms:isArchivedBy>{0,unbounded}</ms:isArchivedBy>-->
+            <!--            <ms:isContinuationOf>{0,unbounded}</ms:isContinuationOf>-->
+            <!--            <ms:replaces>{0,unbounded}</ms:replaces>-->
+            <!--            <ms:isVersionOf>{0,1}</ms:isVersionOf>-->
+            <!--            <ms:relation>{0,unbounded}</ms:relation>-->
+            <!--            <ms:supportType>{0,1}</ms:supportType>-->
+            <ms:LRSubclass>
+                <!--                <ms:Corpus>{1,1}</ms:Corpus>-->
+                <!--                <ms:LexicalConceptualResource>{1,1}</ms:LexicalConceptualResource>-->
+                <!--                <ms:LanguageDescription>{1,1}</ms:LanguageDescription>-->
+                <ms:ToolService>
+                    <ms:lrType>toolService</ms:lrType>
+                    <ms:function>
+                        <ms:LTClassRecommended>http://w3id.org/meta-share/omtd-share/PosTagging</ms:LTClassRecommended>
+                        <!--<ms:LTClassOther>{1,1}</ms:LTClassOther>-->
+                    </ms:function>
+                    <ms:SoftwareDistribution>
+                        <ms:SoftwareDistributionForm>http://w3id.org/meta-share/meta-share/dockerImage
+                        </ms:SoftwareDistributionForm>
+                        <!--                        <ms:executionLocation>{0,1}</ms:executionLocation>--> <!--Recommended-->
+                        <!--                        <ms:downloadLocation>{0,1}</ms:downloadLocation>--> <!--Recommended-->
+                        <!--                        <ms:dockerDownloadLocation>{0,1}</ms:dockerDownloadLocation>-->  <!--Recommended-->
+                        <!--                        <ms:serviceAdapterDownloadLocation>{0,1}</ms:serviceAdapterDownloadLocation>-->  <!--Recommended-->
+                        <!--                        <ms:accessLocation>{0,1}</ms:accessLocation>-->  <!--Recommended-->
+                        <!--                        <ms:demoLocation>{0,1}</ms:demoLocation>-->  <!--Recommended-->
+                        <!--                        <ms:isDescribedBy xmlns:ms="http://w3id.org/meta-share/meta-share/">-->  <!--Recommended-->
+                        <!--                            <ms:title xml:lang="">{1,unbounded}</ms:title>-->
+                        <!--                            <ms:DocumentIdentifier ms:DocumentIdentifierScheme="">{0,unbounded}</ms:DocumentIdentifier>-->
+                        <!--                        </ms:isDescribedBy>-->
+                        <!--                        <ms:additionalHWRequirements>{0,1}</ms:additionalHWRequirements>--> <!--Recommended-->
+                        <!--                        <ms:command>{0,1}</ms:command>-->
+                        <ms:webServiceType>http://w3id.org/meta-share/meta-share/other</ms:webServiceType>
+                        <ms:operatingSystem>http://w3id.org/meta-share/meta-share/linux</ms:operatingSystem>
+                        <ms:licenceTerms>
+                            <ms:conditionOfUse>http://w3id.org/meta-share/meta-share/unspecified</ms:conditionOfUse>
+                        </ms:licenceTerms>
+                        <!--                        <ms:cost>{0,1}</ms:cost>--> <!--Recommended-->
+                        <!--                        <ms:membershipInstitution>{0,unbounded}</ms:membershipInstitution>--> <!--Recommended-->
+                        <!--                        <ms:attributionText xml:lang="">{0,unbounded}</ms:attributionText>-->
+                        <!--                        <ms:copyrightStatement xml:lang="">{0,unbounded}</ms:copyrightStatement>-->
+                        <!--                        <ms:availabilityStartDate>{0,1}</ms:availabilityStartDate>-->
+                        <!--                        <ms:availabilityEndDate>{0,1}</ms:availabilityEndDate>-->
+                        <!--                        <ms:distributionRightsHolder>{0,unbounded}</ms:distributionRightsHolder>-->
+                        <!--                        <ms:accessRights>{0,unbounded}</ms:accessRights>-->
+                    </ms:SoftwareDistribution>
+                    <ms:languageDependent>true</ms:languageDependent>
+                    <ms:inputContentResource>
+                        <ms:processingResourceType>http://w3id.org/meta-share/meta-share/userInputText
+                        </ms:processingResourceType>
+                        <!--                        <ms:samplesLocation>{0,1}</ms:samplesLocation>-->
+                        <ms:language>
+                            <ms:languageTag>pt</ms:languageTag>
+                            <ms:languageId>pt</ms:languageId>
+                        </ms:language>
+                        <ms:mediaType>http://w3id.org/meta-share/meta-share/text</ms:mediaType>
+                        <ms:dataFormat>
+                            <ms:dataFormatRecommended>http://w3id.org/meta-share/omtd-share/Text
+                            </ms:dataFormatRecommended>
+                        </ms:dataFormat>
+                        <!--                        <ms:characterEncoding>{0,unbounded}</ms:characterEncoding>-->
+                        <!--                        <ms:annotationType>{0,unbounded}</ms:annotationType>--> <!--Recommended-->
+                        <!--                        <ms:segmentationLevel>{0,unbounded}</ms:segmentationLevel>-->
+                        <!--                        <ms:typesystem>{0,1}</ms:typesystem>-->
+                        <!--                        <ms:annotationSchema>{0,1}</ms:annotationSchema>-->
+                        <!--                        <ms:annotationResource>{0,1}</ms:annotationResource>-->
+                        <!--                        <ms:modalityType>{0,unbounded}</ms:modalityType>-->
+                        <!--                        <ms:modalityTypeDetails xml:lang="">{0,unbounded}</ms:modalityTypeDetails>-->
+                    </ms:inputContentResource>
+                    <ms:outputResource>
+                        <!--                        <ms:samplesLocation>{0,1}</ms:samplesLocation>-->
+                        <ms:language>
+                            <ms:languageTag>pt</ms:languageTag>
+                            <ms:languageId>pt</ms:languageId>
+                        </ms:language>
+                        <!--                        <ms:mediaType>{0,1}</ms:mediaType>--> <!--Recommended-->
+                        <ms:dataFormat>
+                            <ms:dataFormatRecommended>http://w3id.org/meta-share/omtd-share/Json
+                            </ms:dataFormatRecommended>
+                        </ms:dataFormat>
+                        <!--                        <ms:characterEncoding>{0,unbounded}</ms:characterEncoding>-->
+                        <ms:annotationType>
+                            <ms:annotationTypeRecommended>http://w3id.org/meta-share/omtd-share/NamedEntity
+                            </ms:annotationTypeRecommended>
+                        </ms:annotationType>
+                        <!--                        <ms:segmentationLevel>{0,unbounded}</ms:segmentationLevel>-->
+                        <!--                        <ms:typesystem>{0,1}</ms:typesystem>-->
+                        <!--                        <ms:annotationSchema>{0,1}</ms:annotationSchema>-->
+                        <!--                        <ms:annotationResource>{0,1}</ms:annotationResource>-->
+                        <!--                        <ms:modalityType>{0,unbounded}</ms:modalityType>-->
+                        <!--                        <ms:modalityTypeDetails xml:lang="">{0,unbounded}</ms:modalityTypeDetails>-->
+                    </ms:outputResource>
+
+                    <!--                    <ms:requiresLR>{0,unbounded}</ms:requiresLR>-->
+                    <!--                    <ms:typesystem>{0,1}</ms:typesystem>-->
+                    <!--                    <ms:annotationSchema>{0,1}</ms:annotationSchema>-->
+                    <!--                    <ms:annotationResource>{0,unbounded}</ms:annotationResource>-->
+                    <!--                    <ms:mlModel>{0,unbounded}</ms:mlModel>-->
+<!--                    <ms:mlFramework1>http://w3id.org/meta-share/meta-share/PyTorch-->
+                    <!--                    </ms:mlFramework1> &lt;!&ndash; http://w3id.org/meta-share/meta-share/TensorFlow &ndash;&gt;-->
+                    <!--                    <ms:framework>{0,1}</ms:framework>-->
+                    <!--                    <ms:formalism xml:lang="">{0,unbounded}</ms:formalism>-->
+                    <!--                    <ms:method>{0,1}</ms:method>-->
+                    <ms:implementationLanguage>Python</ms:implementationLanguage> <!-- Java, Python-->
+                    <!--                    <ms:requiresSoftware>{0,unbounded}</ms:requiresSoftware>-->
+                    <ms:requiredHardware>http://w3id.org/meta-share/meta-share/none5</ms:requiredHardware>
+                    <!--                    <ms:runningEnvironmentDetails xml:lang="">{0,unbounded}</ms:runningEnvironmentDetails>-->
+                    <!--                    <ms:runningTime>{0,1}</ms:runningTime>-->
+                    <ms:trl>http://w3id.org/meta-share/meta-share/trl9</ms:trl>
+                    <ms:evaluated>true</ms:evaluated> <!--Recommended-->
+                    <!--                    <ms:evaluation>{0,unbounded}</ms:evaluation>-->
+                    <!--                    <ms:previousAnnotationTypesPolicy>{0,1}</ms:previousAnnotationTypesPolicy>-->
+                    <!--                    <ms:parameter>{0,unbounded}</ms:parameter>-->
+                </ms:ToolService>
+            </ms:LRSubclass>
+        </ms:LanguageResource>
+        <!--        <ms:LicenceTerms>{1,1}</ms:LicenceTerms>-->
+        <!--        <ms:Document>{1,1}</ms:Document>-->
+
+        <ms:Organization>
+            <!--            <ms:actorType>{1,1}</ms:actorType>-->
+            <ms:organizationName xml:lang="">GRADIANT</ms:organizationName>
+            <!--            <ms:OrganizationIdentifier ms:OrganizationIdentifierScheme="">{0,unbounded}</ms:OrganizationIdentifier>-->
+            <ms:website>http://gradiant.org/</ms:website>
+        </ms:Organization>
+        <!--        <ms:Group>{1,1}</ms:Group>--> <!--Recommended-->
+        <!--        <ms:Person>{1,1}</ms:Person>--> <!--Recommended-->
+        <!--        <ms:Project>{1,1}</ms:Project>-->
+        <!--        <ms:Repository>{1,1}</ms:Repository>--> <!--Recommended-->
+    </ms:DescribedEntity>
+
+</ms:MetadataRecord>
