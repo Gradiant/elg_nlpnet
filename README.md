@@ -47,3 +47,5 @@ The original work of this tool is:
 - SRL Model: Fonseca, E. R. and Rosa, J.L.G. A Two-Step Convolutional Neural Network Approach for Semantic Role Labeling. Proceedings of the 2013 International Joint Conference on Neural Networks, 2013. p. 2955-2961
 - PoS Model: Fonseca, E. R. and Rosa, J.L.G. Mac-Morpho Revisited: Towards Robust Part-of-Speech Tagging. Proceedings of the 9th Brazilian Symposium in Information and Human Language Technology, 2013. p. 98-107
 - More info: http://nilc.icmc.usp.br/nlpnet/
+
+The license of the original work is MIT License.
