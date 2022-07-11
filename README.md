@@ -12,18 +12,18 @@ sh docker-build.sh
 ```
 ## Run
 ```
-docker run --rm -p 0.0.0.0:5000:5000 --name nlpnet elg_nlpnet
+docker run --rm -p 0.0.0.0:8866:8866 --name nlpnet elg_nlpnet:1.0.1
 ```
 
 ## Use
 - Tagger : two types:
   - Part of Speach (POS):
     ```
-    curl -X POST  http://127.0.0.1:5000/tag_process -H 'Content-Type: application/json' -d '{ "type":"text", "content":"O rato roeu a roupa do rei de Roma.", "params":{"task":"pos"} }'
+    curl -X POST  http://127.0.0.1:8866/tag_process -H 'Content-Type: application/json' -d '{ "type":"text", "content":"O rato roeu a roupa do rei de Roma.", "params":{"task":"pos"} }'
     ```
   - Semantic Role Labeling (SRL)
     ```
-    curl -X POST  http://127.0.0.1:5000/tag_process -H 'Content-Type: application/json' -d '{ "type":"text", "content":"O rato roeu a roupa do rei de Roma.", "params":{"task":"srl"} }'
+    curl -X POST  http://127.0.0.1:886/tag_process -H 'Content-Type: application/json' -d '{ "type":"text", "content":"O rato roeu a roupa do rei de Roma.", "params":{"task":"srl"} }'
     ```
 
 ## Test

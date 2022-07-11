@@ -49,7 +49,7 @@ def generate_failure_response(status, code, text, params, detail):
     if params:
         error["params"] = params
     if detail:
-        error["detail"] = {"message": detail}
+        error["detail"] = {"message": str(detail)}
 
     raise JsonError(status_=status, failure={"errors": [error]})
 
@@ -58,14 +58,25 @@ def generate_failure_response(status, code, text, params, detail):
 @app.route("/tag_process", methods=["POST"])
 def tag_process():
     data = request.get_json()
-    print(data)
-    # Error check in requests
+
+    if data["type"] != "text":
+        return generate_failure_response(
+            status=400,
+            code="elg.request.type.unsupported",
+            text="Request type {0} not supported by this service",
+            params=[data["type"]],
+            detail=None,
+        )
     if "content" not in data:
-        return error_response(code="elg.request.invalid", text="Error in input text.")
-    elif "task" not in data["params"]:
-        return error_response(code="elg.request.invalid", text="Invalid method.")
-    elif data["params"]["task"] != "srl" and data["params"]["task"] != "pos":
-        return error_response(code="elg.request.invalid", text="Invalid method.")
+        return invalid_request_error(None, "Content parameter not in request")
+
+    content = data.get("content")
+    params = data.get("params", {})
+    if "task" not in params:
+        return invalid_request_error(None, "task parameter not in request")
+
+    if params["task"] not in ["srl", "pos"]:
+        return invalid_request_error(None, "task should be 'srl' or 'pos'")
 
     # Params
     v = ""
@@ -73,7 +84,6 @@ def tag_process():
     t = ""
     norepeat = ""
     lang = "pt"  # pt for defect
-    params = data["params"]
     method = params["task"]
 
     if "v" in params:
@@ -87,18 +97,22 @@ def tag_process():
     if "norepeat" in params:
         norepeat = params["norepeat"]
 
-    # Text
-    text = data["content"]
-    print(text)
+    if lang != "pt":
+        return invalid_request_error(
+            None, "Only language supported is portuguese ('pt')"
+        )
+
     try:
-        result = run_tagger(method, v, t, lang, norepeat, gold, text)
+        result = run_tagger(method, v, t, lang, norepeat, gold, content)
     except Exception as e:
+        text = "Unexpected error."
+        # Standard message for internal error - the real error message goes in params
         return generate_failure_response(
-            status=404,
+            status=500,
             code="elg.service.internalError",
-            text=None,
-            params=None,
-            detail=str(e),
+            text="Internal error during processing: {0}",
+            params=[text],
+            detail=None,
         )
     return generate_successful_response(result, method)
 
@@ -118,5 +132,21 @@ def run_tagger(method, v, t, lang, norepeat, gold, text):
     return sent
 
 
+@json_app.invalid_json_error
+def invalid_request_error(e, message):
+    """Generates a valid ELG "failure" response if the request cannot be parsed"""
+    raise JsonError(
+        status_=400,
+        failure={
+            "errors": [
+                {
+                    "code": "elg.request.invalid",
+                    "text": "Invalid request message: " + message,
+                }
+            ]
+        },
+    )
+
+
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0", port=8866)
