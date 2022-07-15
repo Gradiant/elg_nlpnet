@@ -1,7 +1,5 @@
 FROM ubuntu:18.04
 
-
-
 RUN apt-get update -y \
     && apt-get install -y python3-pip python3-dev \
     && apt-get install -y wget \
@@ -34,7 +32,7 @@ RUN wget http://nilc.icmc.usp.br/nlpnet/data/srl-pt.tgz
 RUN tar xvzf srl-pt.tgz
 
 
-EXPOSE 5000
+EXPOSE 8866
 
 #Download nltk
 WORKDIR /nlpnet/
