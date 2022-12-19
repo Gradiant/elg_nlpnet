@@ -25,15 +25,17 @@ def generate_successful_response(text, method):
 
     if method == "pos":
         for item in text[0]:
-            response.append({"content": item[0], "role": item[1]})
+            response.append({"content": item[0], "features": item[1]})
     else:
+
         result = text[0][1]
 
         for i in result.items():
             texts = []
             for j in i[1]:
                 texts.append({"content": j})
-            response.append({"role": i[0], "texts": texts})
+            response.append({"features": i[0], "texts": texts})
+
 
     print(response)
 
@@ -55,8 +57,8 @@ def generate_failure_response(status, code, text, params, detail):
 
 
 # Scripts
-@app.route("/tag_process", methods=["POST"])
-def tag_process():
+@app.route("/tag_process/pos", methods=["POST"])
+def tag_process_pos_entrypoint():
     data = request.get_json()
 
     if data["type"] != "text":
@@ -71,13 +73,32 @@ def tag_process():
         return invalid_request_error(None, "Content parameter not in request")
 
     content = data.get("content")
-    params = data.get("params", {})
-    if "task" not in params:
-        return invalid_request_error(None, "task parameter not in request")
+    params = {"task": "pos"}
 
-    if params["task"] not in ["srl", "pos"]:
-        return invalid_request_error(None, "task should be 'srl' or 'pos'")
+    return tag_process(content, params)
 
+# Scripts
+@app.route("/tag_process/srl", methods=["POST"])
+def tag_process_srl_entrypoint():
+    data = request.get_json()
+
+    if data["type"] != "text":
+        return generate_failure_response(
+            status=400,
+            code="elg.request.type.unsupported",
+            text="Request type {0} not supported by this service",
+            params=[data["type"]],
+            detail=None,
+        )
+    if "content" not in data:
+        return invalid_request_error(None, "Content parameter not in request")
+
+    content = data.get("content")
+    params = {"task": "srl"}
+
+    return tag_process(content, params)
+
+def tag_process(content, params):
     # Params
     v = ""
     gold = ""
@@ -85,22 +106,6 @@ def tag_process():
     norepeat = ""
     lang = "pt"  # pt for defect
     method = params["task"]
-
-    if "v" in params:
-        v = params["v"]
-    if "gold" in params:
-        gold = params["gold"]
-    if "lang" in params:
-        lang = params["lang"]
-    if "t" in params:
-        t = params["t"]
-    if "norepeat" in params:
-        norepeat = params["norepeat"]
-
-    if lang != "pt":
-        return invalid_request_error(
-            None, "Only language supported is portuguese ('pt')"
-        )
 
     try:
         result = run_tagger(method, v, t, lang, norepeat, gold, content)
