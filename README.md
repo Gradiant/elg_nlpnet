@@ -31,11 +31,11 @@ In the folder `test` you have the files for testing the API according to the ELG
 It uses an API that acts as a proxy with your dockerized API that checks both the requests and the responses.
 For this follow the instructions:
 
-1) Launch the test:  `sudo docker-compose --env-file nlpnet.env up`
+1) Launch the test:  `sudo docker-compose --env-file [env file] up` . Env file are `nlpnet_pos.env`and `nlpnet_srl.env`.
 
 2) Make the requests, instead of to your API's endpoint, to the test's endpoint:
    ```
-      curl -X POST  http://0.0.0.0:8866/processText/service -H 'Content-Type: application/json' -d '{ "type":"text", "content":"O rato roeu a roupa do rei de Roma.", "params":{"task":"pos"} }'
+      curl -X POST  http://0.0.0.0:8866/processText/service -H 'Content-Type: application/json' -d '{ "type":"text", "content":"O rato roeu a roupa do rei de Roma."}'
    ```
 3) If your request and the API's response is compliance with the ELG API, you will receive the response.
    1) If the request is incorrect: Probably you will don't have a response and the test tool will not show any message in logs.
