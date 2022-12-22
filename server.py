@@ -25,19 +25,13 @@ def generate_successful_response(text, method):
 
     if method == "pos":
         for item in text[0]:
-            response.append({"content": item[0], "features": item[1]})
+            response.append({"content":  item[0], "features": {"category": item[1]}})
     else:
-
         result = text[0][1]
 
         for i in result.items():
-            texts = []
             for j in i[1]:
-                texts.append({"content": j})
-            response.append({"features": i[0], "texts": texts})
-
-
-    print(response)
+                response.append({"content":  j, "features": {"category": i[0]}})
 
     return {"response": {"type": "texts", "texts": response}}
 
