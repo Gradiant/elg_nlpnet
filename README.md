@@ -12,7 +12,7 @@ sh docker-build.sh
 ```
 ## Run
 ```
-docker run --rm -p 0.0.0.0:8866:8866 --name nlpnet elg_nlpnet:1.0.2
+docker run --rm -p 0.0.0.0:8866:8866 --name nlpnet elg_nlpnet:1.0.3
 ```
 
 ## Use
